@@ -12,7 +12,7 @@ A PostgreSQL database for managing students, courses, and course enrollments.
 
 - students — stores student information
 - courses — stores course information
-- enrollments — connects students with courses
+- enrollments — connects students with  courses
 
 ## Features
 
