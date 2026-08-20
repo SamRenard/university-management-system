@@ -77,3 +77,39 @@ Completed practical scenarios under the **"Joins and Subqueries"** section on `p
 
 ---
 **Tech Stack**: PostgreSQL | pgAdmin 4 | Git / GitHub
+
+
+# Advanced SQL (PostgreSQL): Sales Analytics 📊
+
+This repository contains practical SQL scripts developed as part of **Day 14** of my Data/Backend engineering curriculum. The primary focus is on advanced PostgreSQL concepts, specifically data aggregation and filtering.
+
+## 🎯 Learning Objectives Completed
+- **GROUP BY & HAVING:** Grouping datasets and applying conditional filters to aggregated results.
+- **Aggregate Functions:** Utilizing `COUNT()`, `SUM()`, and `AVG()` for business analytics.
+- **NULL Behavior:** Understanding and handling `NULL` values safely in arithmetic operations and groupings using `COALESCE`.
+- **Refactoring:** Practicing the "5-minute review" habit to improve code reliability and readability.
+
+## 🗄️ Database Schema
+The mock database simulates a basic E-commerce environment:
+1. `customers` - Stores client data.
+2. `orders` - Tracks individual order transactions.
+3. `order_items` - Details the specific products/categories within an order.
+
+## 🚀 Key Scenarios Implemented
+The `sales_analytics.sql` script includes the following analytical queries:
+1. **Monthly Revenue:** Calculates total revenue generated per month based on the order dates.
+2. **Top-5 Customers:** Identifies the highest-spending customers using table `JOIN`s and `ORDER BY ... DESC`.
+3. **Average Ticket by Category:** Calculates the average order value (Average Ticket) grouped by product category.
+
+### 🛠️ Continuous Improvement (Code Refactoring)
+Following the **"read the code again and improve 1 thing"** rule, the initial monthly revenue query was refactored to:
+- Safely handle missing (`NULL`) amounts using `COALESCE()`.
+- Use the `ROUND()` function to maintain financial precision (2 decimals).
+- Implement a `HAVING` clause to filter and display only months generating over $1,000 in revenue.
+
+## 💻 How to Run
+1. Clone this repository to your local machine.
+2. Open **pgAdmin** or any PostgreSQL client (e.g., DBeaver, DataGrip).
+3. Connect to a PostgreSQL database.
+4. Execute the `sales_analytics.sql` file in the Query Tool. The script automatically sets up the mock schema, inserts sample data, and is ready for executing the analytical queries.
+
