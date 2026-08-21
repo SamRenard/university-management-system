@@ -113,3 +113,31 @@ Following the **"read the code again and improve 1 thing"** rule, the initial mo
 3. Connect to a PostgreSQL database.
 4. Execute the `sales_analytics.sql` file in the Query Tool. The script automatically sets up the mock schema, inserts sample data, and is ready for executing the analytical queries.
 
+
+
+# 🚀 PostgreSQL Performance Optimization & Indexing
+
+## 📖 Overview
+This repository contains the practical implementation for **Day 16 of the Backend Engineering Protocol**. The primary focus is on understanding database performance, specifically how to generate large datasets, analyze query execution plans, and optimize slow queries using **B-tree indexes**.
+
+## 🛠️ Features & Tasks Completed
+- **Data Generation:** Created a `users` table and populated it with **1,000,000 rows** of mock data using PostgreSQL's native `generate_series()` function.
+- **Performance Analysis:** Used `EXPLAIN ANALYZE` to measure the execution time of a sequential scan (slow query) before indexing.
+- **B-tree Indexing:** Created a B-tree index on the `username` column to optimize search operations.
+- **100x Speed Optimization:** Compared query execution plans, proving the transition from a slow **Seq Scan** to a lightning-fast **Index Scan**.
+- **Code Refactoring:** Improved query efficiency by replacing `SELECT *` with explicit column selections (`SELECT id, username`) to save memory and bandwidth.
+
+## 🧠 Deep Theory Covered
+- **Indexes (B-tree):** How balanced trees work under the hood to prevent full table scans.
+- **EXPLAIN ANALYZE:** The difference between query estimation (`EXPLAIN`) and actual execution metrics (`ANALYZE`).
+- **Database Normalization:** Principles of organizing tables to reduce redundancy (1NF: Atomicity, 2NF: No partial dependency, 3NF: No transitive dependency).
+
+## 💻 How to Run
+1. Open pgAdmin, DBeaver, or the `psql` terminal.
+2. Connect to your PostgreSQL database.
+3. Execute the SQL commands from the `postgres_indexing.sql` file sequentially.
+4. Observe the `Execution Time` difference in the output console before and after creating the index.
+  
+
+
+
