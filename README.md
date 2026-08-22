@@ -137,7 +137,35 @@ This repository contains the practical implementation for **Day 16 of the Backen
 2. Connect to your PostgreSQL database.
 3. Execute the SQL commands from the `postgres_indexing.sql` file sequentially.
 4. Observe the `Execution Time` difference in the output console before and after creating the index.
-  
 
+
+  
+🏆 Course Leaderboard Analytics
+📌 Overview
+This repository contains an advanced SQL script designed to calculate a dynamic course leaderboard. It effectively ranks students based on their exam scores using PostgreSQL.
+🚀 Technical Highlights
+Window Functions: Utilizes DENSE_RANK() to ensure fair ranking without gaps when students have tied scores.
+Common Table Expressions (CTE): Employs WITH clauses to maintain modular, readable, and professional code architecture.
+Data Partitioning: Uses PARTITION BY to independently rank students within their respective courses.
+🛠️ Usage
+Ensure you have a PostgreSQL environment set up.
+Run the database setup script to create the exam_results schema and mock data.
+Execute the 01_course_leaderboard.sql script to generate the rankings.
+Built by an AI Engineer passionate about efficient data processing and robust architecture.
+
+
+
+📈 Month-over-Month (MoM) Growth Analysis
+📌 Overview
+This repository features a robust time-series analysis script written in PostgreSQL. It calculates the Month-over-Month (MoM) enrollment growth percentage, a critical metric for business intelligence, data engineering, and predictive AI modeling.
+🚀 Technical Highlights
+Lag Functions: Implements the LAG() window function to safely retrieve data from previous temporal rows without using complex self-joins.
+Time-Series Aggregation: Uses DATE_TRUNC() to group raw daily event data into structured monthly cohorts.
+Common Table Expressions (CTE): Structures the query logically, separating raw data aggregation from the final percentage calculations.
+🛠️ Usage
+Ensure you have a PostgreSQL environment set up.
+Run the mock data setup script to generate the enrollments table.
+Execute 02_monthly_growth_analysis.sql to view the MoM growth metrics.
+Built by an AI Engineer passionate about efficient data processing and robust architecture.
 
 
